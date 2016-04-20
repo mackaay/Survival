@@ -1,0 +1,18 @@
+#install package
+install.packages("survival")
+library(survival)
+
+#load data and define variables
+time <- 
+event <- 
+group <- 
+
+#KM curve
+kmsurvival <- survfit(Surv(time, event) ~ 1)
+summary(kmsurvival)
+plot(kmsurvival)
+
+#KM curve by group
+kmsurvival <- survfit(Surv(time, event) ~ group)
+summary(kmsurvival)
+plot(kmsurvival)
